@@ -27,10 +27,16 @@ export default function AppBar({chats}) {
   };
     
     return (
-        <Box as="header" p={4} height="100vh" borderRight="1px solid black">
-            <User />
-            <SearchBox value={filter} onChange={changeFilter} />
-            <ChatsList chats={getVisibleChats()} />
+        <Box as="header"   border="1px solid black">
+            <Box bg='grey' p={4} >
+                <User photoUrl={'https://assets.stickpng.com/images/585e4bcdcb11b227491c3396.png'} />
+                <SearchBox value={filter} onChange={changeFilter} />
+            </Box>
+            <Box p={4}>
+                <h2>Chats</h2>
+                <ChatsList chats={getVisibleChats()} />
+            </Box>
+            
         </Box>
         
     );

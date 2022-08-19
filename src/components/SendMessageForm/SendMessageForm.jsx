@@ -1,14 +1,16 @@
-import { Formik, Field, Form } from 'formik';
+import { Formik } from 'formik';
 import { nanoid } from 'nanoid';
+import { FormStyled, FieldStyled } from './SendMessageForm.styled';
 
 
 export default function SendMessageForm({addMessage }) {
     return (
     <Formik
-      initialValues={{ text: '', id: '', date: '' }}
+      initialValues={{ text: '' }}
         onSubmit={(values, { resetForm }) => {
               
-        const date = new Date();
+          const date = new Date();
+          values.fromUser = true;
           values.id = nanoid();
           values.date = date.toLocaleString();
           addMessage(values);
@@ -16,9 +18,9 @@ export default function SendMessageForm({addMessage }) {
         resetForm();
       }}
     >
-      <Form autoComplete="off">
-        <label htmlFor="text">text</label>
-        <Field
+      <FormStyled autoComplete="off">
+        
+        <FieldStyled
           type="text"
           name="text"
           required
@@ -31,7 +33,7 @@ export default function SendMessageForm({addMessage }) {
        
 
         <button type="submit">Send</button>
-      </Form>
+      </FormStyled>
     </Formik>
   );
    
