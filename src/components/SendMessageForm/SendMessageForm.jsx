@@ -2,16 +2,17 @@ import { Formik, Field, Form } from 'formik';
 import { nanoid } from 'nanoid';
 
 
-
-export default function SendMessageForm({onSubmit }) {
+export default function SendMessageForm({addMessage }) {
     return (
     <Formik
       initialValues={{ text: '', id: '', date: '' }}
-            onSubmit={(values, { resetForm }) => {
-                const date = new Date();
+        onSubmit={(values, { resetForm }) => {
+              
+        const date = new Date();
           values.id = nanoid();
           values.date = date.toLocaleString();
-        onSubmit(values);
+          addMessage(values);
+          
         resetForm();
       }}
     >
