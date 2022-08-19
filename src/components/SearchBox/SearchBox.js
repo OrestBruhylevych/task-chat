@@ -5,11 +5,13 @@ export const SearchBox = ({ value, onChange }) => {
   return (
       <Box display="flex" >
           <ImSearch/>
-          <input
+      <input
+        name="filter"
         type="text"
         value={value}
-        // onChange={e => onChange(e.target.value)}
+        onChange={onChange}
          />
     </Box>
   );
 };
+

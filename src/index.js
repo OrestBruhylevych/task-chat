@@ -8,10 +8,11 @@ import { theme } from './theme';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/task-chat/">
-    <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
-  </BrowserRouter>
+        <BrowserRouter basename="/task-chat/">
+          <ThemeProvider theme={theme}>
+           <App />
+          </ThemeProvider>
+        </BrowserRouter>
   </React.StrictMode>
 );
+

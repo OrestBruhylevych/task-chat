@@ -3,11 +3,11 @@
         id: 'id-1',
         name: 'Rosie Simpson',
         message: [
-            {
+            {   id: '18',
                 text: 'Hello',
                 date: '17.18.213'
             },
-            {
+            {id: '17',
                 text: 'Hello',
                 date: '17.18.241'
             }],
@@ -17,11 +17,11 @@
         id: 'id-2',
         name: 'Hermione Kline',
         message: [
-            {
+            {id: '16',
                 text: 'Hello',
                 date: '17.18.251'
             },
-            {
+            {id: '15',
                 text: 'Hello',
                 date: '17.18.261'
             }],
@@ -31,11 +31,11 @@
         id: 'id-3',
         name: 'Eden Clements',
         message: [
-            {
+            {id: '13',
                 text: 'Hello',
                 date: '17.18.271'
             },
-            {
+            {id: '12',
                 text: 'Hello',
                 date: '17.18.281'
             }],
@@ -45,11 +45,11 @@
         id: 'id-4',
         name: 'Annie Copeland',
         message: [
-            {
+            {id: '14',
                 text: 'Hello',
                 date: '17.18.291'
             },
-            {
+            {id: '12',
                 text: 'Hello',
                 date: '17.18.201'
             }],
@@ -58,10 +58,3 @@
 ];
 
 
-export const getChats = () => {
-  return chatsData;
-};
-
-export const getChatById = (chatId) => {
-  return chatsData.find((chat) => chat.id === chatId);
-};
