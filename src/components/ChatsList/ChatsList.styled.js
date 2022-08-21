@@ -5,13 +5,13 @@ export const ChatsListStyled = styled.div`
   width: 100%;
 
   @media screen and (min-width: 480px) {
-    height: 700px;
+    height: 500px;
   }
   @media screen and (min-width: 768px) {
-    height: 344px;
+    height: 244px;
   }
   @media screen and (min-width: 1200px) {
-    height: 794px;
+    height: 494px;
   }
 `;
 

@@ -10,10 +10,8 @@ export const AppBarStyled = styled.header`
   }
   @media screen and (min-width: 768px) {
     width: 200px;
-    height: 550px;
   }
   @media screen and (min-width: 1200px) {
     width: 400px;
-    height: 1000px;
   }
 `;

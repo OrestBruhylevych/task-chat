@@ -4,7 +4,7 @@ export const LoyoutStyled = styled.div`
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
+  margin: 20px auto;
   @media screen and (min-width: 480px) {
     width: 480px;
   }
@@ -12,10 +12,8 @@ export const LoyoutStyled = styled.div`
     display: flex;
 
     width: 768px;
-    height: 550px;
   }
   @media screen and (min-width: 1200px) {
     width: 1200px;
-    height: 1000px;
   }
 `;
