@@ -1,20 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
-
-export const Container = styled.div`
- width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-  @media screen and (min-width: 480px) {
-    width: 480px;
-  }
-  @media screen and (min-width: 768px) {
-    width: 768px;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-  }
-`;
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -37,4 +21,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     list-style: none;
   }
+
+
 `;

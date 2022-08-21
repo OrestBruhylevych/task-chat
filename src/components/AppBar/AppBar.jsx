@@ -3,6 +3,7 @@ import ChatsList from 'components/ChatsList/ChatsList';
 import { SearchBox } from 'components/SearchBox/SearchBox';
 import User from 'components/User/User';
 import { useState } from 'react';
+import { AppBarStyled } from './AppBar.styled';
 
 export default function AppBar({ chats }) {
   const [filter, setFilter] = useState('');
@@ -21,19 +22,21 @@ export default function AppBar({ chats }) {
   };
 
   return (
-    <Box as="header" border="1px solid black">
+    <AppBarStyled>
       <Box bg="grey" p={4}>
         <User
           photoUrl={
-            'https://assets.stickpng.com/images/585e4bcdcb11b227491c3396.png'
+            'https://messukeskus.s3.eu-central-1.amazonaws.com/wp-content/uploads/2022/06/21103322/User.png'
           }
         />
         <SearchBox value={filter} onChange={changeFilter} />
       </Box>
       <Box p={4}>
-        <h2>Chats</h2>
+        <Box as="h2" color="aqua">
+          Chats
+        </Box>
         <ChatsList chats={getVisibleChats()} />
       </Box>
-    </Box>
+    </AppBarStyled>
   );
 }
