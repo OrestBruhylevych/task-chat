@@ -23,7 +23,7 @@ export default function AppBar({ chats }) {
 
   return (
     <AppBarStyled>
-      <Box bg="grey" p={4}>
+      <Box bg="primary" p={4}>
         <User
           photoUrl={
             'https://messukeskus.s3.eu-central-1.amazonaws.com/wp-content/uploads/2022/06/21103322/User.png'
@@ -32,7 +32,7 @@ export default function AppBar({ chats }) {
         <SearchBox value={filter} onChange={changeFilter} />
       </Box>
       <Box p={4}>
-        <Box as="h2" color="aqua">
+        <Box as="h2" color="aqua" mb={4}>
           Chats
         </Box>
         <ChatsList chats={getVisibleChats()} />

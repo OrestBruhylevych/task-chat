@@ -20,7 +20,7 @@ export default function MassegeList({ message }) {
             return (
               <MassegeItemStyledFromUser key={id}>
                 <p>{text}</p>
-                <p>{date}</p>
+                <p>{date.dateMessage}</p>
               </MassegeItemStyledFromUser>
             );
           }
@@ -28,7 +28,7 @@ export default function MassegeList({ message }) {
           return (
             <MassegeItemStyledNotFromUser key={id}>
               <p>{text}</p>
-              <p>{date}</p>
+              <p>{date.dateMessage}</p>
             </MassegeItemStyledNotFromUser>
           );
         })}

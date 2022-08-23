@@ -43,10 +43,13 @@ export default function Chat({ chats, setChats }) {
     getMassegeFromChuck()
       .then(res => {
         const newMassege = { text: '', id: '', date: '', fromUser: false };
-        const date = new Date();
+
         newMassege.text = res;
         newMassege.id = nanoid();
-        newMassege.date = date.toLocaleString();
+        newMassege.date = {
+          dateChat: new Date().toDateString(),
+          dateMessage: new Date().toLocaleString(),
+        };
 
         setChats(prevState => {
           const newChats = prevState.map(chat => {

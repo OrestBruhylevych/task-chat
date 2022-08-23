@@ -7,10 +7,13 @@ export default function SendMessageForm({ addMessage }) {
     <Formik
       initialValues={{ text: '' }}
       onSubmit={(values, { resetForm }) => {
-        const date = new Date();
+        // const data = new Date();
         values.fromUser = true;
         values.id = nanoid();
-        values.date = date.toLocaleString();
+        values.date = {
+          dateChat: new Date().toDateString(),
+          dateMessage: new Date().toLocaleString(),
+        };
         addMessage(values);
 
         resetForm();

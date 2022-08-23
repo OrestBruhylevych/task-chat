@@ -1,10 +1,25 @@
+const dateDefault = {
+  dateChat: new Date(0).toDateString(),
+  dateMessage: new Date(0).toLocaleString(),
+};
+
 export const chatsData = [
   {
     id: 'id-1',
     name: 'Rosie Simpson',
     message: [
-      { id: '18', text: 'Hello', date: '17.18.213', fromUser: false },
-      { id: '17', text: 'Hello', fromUser: true, date: '17.18.241' },
+      {
+        id: '18',
+        text: 'Hello',
+        date: dateDefault,
+        fromUser: false,
+      },
+      {
+        id: '17',
+        text: 'Hello',
+        fromUser: true,
+        date: dateDefault,
+      },
     ],
     photoUrl:
       'https://discoverymood.com/wp-content/uploads/2020/04/Mental-Strong-Women-min.jpg',
@@ -17,13 +32,13 @@ export const chatsData = [
         fromUser: true,
         id: '16',
         text: 'Hello',
-        date: '17.18.251',
+        date: dateDefault,
       },
       {
         fromUser: false,
         id: '15',
         text: 'Hello',
-        date: '17.18.261',
+        date: dateDefault,
       },
     ],
     photoUrl:
@@ -37,13 +52,13 @@ export const chatsData = [
         fromUser: true,
         id: '13',
         text: 'Hello',
-        date: '17.18.271',
+        date: dateDefault,
       },
       {
         fromUser: true,
         id: '12',
         text: 'Hello',
-        date: '17.18.281',
+        date: dateDefault,
       },
     ],
     photoUrl:
@@ -57,13 +72,13 @@ export const chatsData = [
         fromUser: false,
         id: '14',
         text: 'Hello',
-        date: '17.18.291',
+        date: dateDefault,
       },
       {
         fromUser: true,
         id: '12',
         text: 'Hello',
-        date: '17.18.201',
+        date: dateDefault,
       },
     ],
     photoUrl:

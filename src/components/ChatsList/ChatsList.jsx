@@ -13,12 +13,20 @@ export default function ChatsList({ chats }) {
       <Box as="ul" display="flex" flexDirection="column">
         {chats.map(({ id, name, message, photoUrl }) => {
           const { text, date } = message[message.length - 1];
+
           return (
             <ItemLinkStyled to={id} key={id}>
-              <img src={photoUrl} alt={name} width="40px" />
-              <h2>{name}</h2>
-              <p>{text}</p>
-              <p>{date}</p>
+              <Box display="flex">
+                <img src={photoUrl} alt={name} width="40px" />
+                <Box width="150px">
+                  <h2>{name}</h2>
+                  <p>{text}</p>
+                </Box>
+              </Box>
+
+              <Box as="p" width="120px">
+                {date.dateChat}
+              </Box>
             </ItemLinkStyled>
           );
         })}
