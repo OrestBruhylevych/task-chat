@@ -69,7 +69,7 @@ export default function Chat({ chats, setChats }) {
 
   return (
     <ChatStyledWrap>
-      <Box bg="grey" p={4}>
+      <Box bg="primary" p={4}>
         <User photoUrl={photoUrl} name={name} />
       </Box>
       <MassegeList message={message} />

@@ -2,15 +2,8 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const ChatsListStyled = styled.div`
-  /* @media screen and (min-width: 480px) {
-    height: 500px;
-  } */
-  @media screen and (min-width: 768px) {
-    height: 244px;
-  }
-  @media screen and (min-width: 1200px) {
-    height: 494px;
-  }
+  height: 100%;
+  padding: 16px;
 `;
 
 export const ItemLinkStyled = styled(NavLink)`

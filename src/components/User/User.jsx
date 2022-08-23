@@ -1,13 +1,14 @@
 import { FiUser } from 'react-icons/fi';
+import { UserStyled } from './User.styled';
 
 export default function User({ photoUrl, name }) {
   return (
     <>
       {photoUrl ? (
-        <div>
+        <UserStyled>
           <img src={photoUrl} alt="user" width="50px" height="50px" />
           {name && <h2>{name}</h2>}
-        </div>
+        </UserStyled>
       ) : (
         <FiUser />
       )}

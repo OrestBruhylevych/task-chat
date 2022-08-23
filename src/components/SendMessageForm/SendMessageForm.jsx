@@ -1,5 +1,6 @@
 import { Formik } from 'formik';
 import { nanoid } from 'nanoid';
+import { AiOutlineSend } from 'react-icons/ai';
 import { FormStyled, FieldStyled } from './SendMessageForm.styled';
 
 export default function SendMessageForm({ addMessage }) {
@@ -21,12 +22,9 @@ export default function SendMessageForm({ addMessage }) {
     >
       <FormStyled autoComplete="off">
         <FieldStyled type="text" name="text" required />
-        {/* <ErrorMessage
-          name="text"
-          render={message => <ErrorText>{message}</ErrorText>}
-        /> */}
-
-        <button type="submit">Send</button>
+        <button type="submit">
+          <AiOutlineSend />
+        </button>
       </FormStyled>
     </Formik>
   );

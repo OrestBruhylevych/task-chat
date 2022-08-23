@@ -31,12 +31,10 @@ export default function AppBar({ chats }) {
         />
         <SearchBox value={filter} onChange={changeFilter} />
       </Box>
-      <Box p={4}>
-        <Box as="h2" color="blue" mb={4}>
-          Chats
-        </Box>
-        <ChatsList chats={getVisibleChats()} />
+      <Box as="h2" color="blue" p={4}>
+        Chats
       </Box>
+      <ChatsList chats={getVisibleChats()} />
     </AppBarStyled>
   );
 }

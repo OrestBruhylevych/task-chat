@@ -19,16 +19,16 @@ export default function MassegeList({ message }) {
           if (fromUser === true) {
             return (
               <MassegeItemStyledFromUser key={id}>
-                <p>{text}</p>
-                <p>{date.dateMessage}</p>
+                <p className="message">{text}</p>
+                <p className="date">{date.dateMessage}</p>
               </MassegeItemStyledFromUser>
             );
           }
 
           return (
             <MassegeItemStyledNotFromUser key={id}>
-              <p>{text}</p>
-              <p>{date.dateMessage}</p>
+              <p className="message">{text}</p>
+              <p className="date">{date.dateMessage}</p>
             </MassegeItemStyledNotFromUser>
           );
         })}

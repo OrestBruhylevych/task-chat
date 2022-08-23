@@ -2,15 +2,42 @@ import styled from 'styled-components';
 import { Form, Field } from 'formik';
 
 export const FormStyled = styled(Form)`
-  background-color: grey;
-  height: 50px;
+  display: flex;
+  align-items: center;
   padding: 20px;
+  background-color: ${p => p.theme.colors.primary};
+  position: relative;
 
-  text-align: center;
+  button {
+    position: absolute;
+    right: 20px;
+
+    padding: 5px;
+    display: block;
+    background-color: transparent;
+    border: none;
+    height: 22px;
+    cursor: pointer;
+
+    :hover,
+    :focus {
+      color: blue;
+    }
+  }
 `;
 
 export const FieldStyled = styled(Field)`
+  display: inline-block;
+  height: 20px;
   width: 100%;
-  height: 30px;
+  font: inherit;
+  font-size: 14px;
+  border: none;
+  outline: none;
   border-radius: 10px;
+
+  ::placeholder {
+    font: inherit;
+    font-size: 14px;
+  }
 `;
