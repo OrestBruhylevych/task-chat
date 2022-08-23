@@ -32,7 +32,7 @@ export default function AppBar({ chats }) {
         <SearchBox value={filter} onChange={changeFilter} />
       </Box>
       <Box p={4}>
-        <Box as="h2" color="aqua" mb={4}>
+        <Box as="h2" color="blue" mb={4}>
           Chats
         </Box>
         <ChatsList chats={getVisibleChats()} />
