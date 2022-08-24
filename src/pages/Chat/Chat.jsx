@@ -21,6 +21,7 @@ export default function Chat({ chats, setChats }) {
 
   const addMessage = values => {
     if (values.text.trim() === '') {
+      Notify.warning(`Please enter the text`);
       return;
     }
 
