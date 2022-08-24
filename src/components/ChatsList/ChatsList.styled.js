@@ -25,6 +25,9 @@ export const ItemLinkStyled = styled(NavLink)`
     border-radius: 50%;
     margin-right: 10px;
   }
+  p {
+    word-wrap: break-word;
+  }
 
   &.active {
     background-color: ${p => p.theme.colors.primary};

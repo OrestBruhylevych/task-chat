@@ -1,40 +1,45 @@
 import styled from 'styled-components';
-import { Form, Field } from 'formik';
+import { Form } from 'formik';
 
 export const FormStyled = styled(Form)`
   display: flex;
   align-items: center;
   padding: 20px;
   background-color: ${p => p.theme.colors.primary};
-  position: relative;
+  /* position: relative; */
 
   button {
-    position: absolute;
-    right: 20px;
+    /* position: absolute;
+    right: 25px; */
 
-    padding: 5px;
     display: block;
-    background-color: transparent;
+    background-color: white;
     border: none;
-    height: 22px;
+    height: 48px;
+    width: 40px;
     cursor: pointer;
+    border-radius: 0 10px 10px 0;
 
     :hover,
     :focus {
-      color: blue;
+      background-color: blue;
+      color: white;
     }
   }
 `;
 
-export const FieldStyled = styled(Field)`
-  display: inline-block;
-  height: 20px;
+export const TextareaStyled = styled.textarea`
+  resize: none;
+  /* display: inline-block; */
+  /* height: 20px; */
   width: 100%;
   font: inherit;
   font-size: 14px;
   border: none;
   outline: none;
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  padding: 5px 40px 5px 5px;
+  border-radius: 10px 0 0 10px;
 
   ::placeholder {
     font: inherit;

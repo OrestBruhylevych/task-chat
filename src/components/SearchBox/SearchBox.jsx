@@ -5,6 +5,7 @@ export const SearchBox = ({ value, onChange }) => {
     <SearchBoxStyled>
       <SearchIcon />
       <input
+        autoComplete="off"
         name="filter"
         type="text"
         value={value}

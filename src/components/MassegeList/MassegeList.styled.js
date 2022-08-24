@@ -5,36 +5,36 @@ export const MessageListStyled = styled.div`
 `;
 
 export const MassegeItemStyledFromUser = styled.li`
+  margin-bottom: 10px;
   p.message {
-    display: block;
+    margin-left: auto;
     border-radius: 10px;
     padding: 10px;
     background-color: ${p => p.theme.colors.primary};
-    max-width: 240px;
     margin-left: auto;
+    max-width: 240px;
+    word-wrap: break-word;
   }
 
   p.date {
-    display: block;
     max-width: 130px;
     margin-left: auto;
   }
 `;
 
 export const MassegeItemStyledNotFromUser = styled.li`
+  margin-bottom: 10px;
   p.message {
-    display: block;
+    word-wrap: break-word;
     border-radius: 10px;
     padding: 10px;
     max-width: 240px;
+
     margin-right: auto;
     background-color: ${p => p.theme.colors.accent};
-    width: 75%;
-    margin-right: auto;
   }
 
   p.date {
-    display: block;
     margin-right: auto;
   }
 `;

@@ -1,14 +1,25 @@
-import { Formik } from 'formik';
+import { Formik, useField } from 'formik';
 import { nanoid } from 'nanoid';
 import { AiOutlineSend } from 'react-icons/ai';
-import { FormStyled, FieldStyled } from './SendMessageForm.styled';
+import { FormStyled, TextareaStyled } from './SendMessageForm.styled';
+
+const MyTextArea = ({ ...props }) => {
+  const [field, meta] = useField(props);
+  return (
+    <>
+      <TextareaStyled className="text-area" {...field} {...props} />
+      {meta.touched && meta.error ? (
+        <div className="error">{meta.error}</div>
+      ) : null}
+    </>
+  );
+};
 
 export default function SendMessageForm({ addMessage }) {
   return (
     <Formik
       initialValues={{ text: '' }}
       onSubmit={(values, { resetForm }) => {
-        // const data = new Date();
         values.fromUser = true;
         values.id = nanoid();
         values.date = {
@@ -21,7 +32,12 @@ export default function SendMessageForm({ addMessage }) {
       }}
     >
       <FormStyled autoComplete="off">
-        <FieldStyled type="text" name="text" required />
+        <MyTextArea
+          required
+          name="text"
+          rows="2"
+          placeholder="Input message...."
+        />
         <button type="submit">
           <AiOutlineSend />
         </button>
